@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var buttonText = "Start"
     var body: some View {
         VStack {
+            Spacer()
             CircleFigure(color: .red, opacity: counter == 1 ? 1.0 : 0.2)
             CircleFigure(color: .yellow, opacity: counter == 2 ? 1.0 : 0.2)
             CircleFigure(color: .green, opacity: counter == 3 ? 1.0 : 0.2)
@@ -31,9 +32,12 @@ struct ContentView: View {
                 }
             }, label: {
                 Text(buttonText)
+                    .font(.largeTitle)
           })
+            .padding()
+            
+            Spacer()
         }
-        .padding()
     }
 }
 
