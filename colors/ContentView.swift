@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var counter = 1
-    @State var buttonText = "Start"
+    @State private var counter = 1
+    @State private var buttonText = "Start"
     var body: some View {
         VStack {
             Spacer()
@@ -27,7 +27,6 @@ struct ContentView: View {
                 case 3:
                     counter = 1
                 default:
-                    buttonText = "Start"
                     counter += 1
                 }
             }, label: {

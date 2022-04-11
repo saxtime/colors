@@ -12,9 +12,9 @@ struct CircleFigure: View {
     let opacity: Double
     var body: some View {
         Circle()
+            .frame(width: 70, height: 70)
             .foregroundColor(color)
             .opacity(opacity)
-            .frame(width: 70, height: 70)
             .overlay(Circle().stroke(Color.white, lineWidth: 3))
             .shadow(radius: 10)
     }
